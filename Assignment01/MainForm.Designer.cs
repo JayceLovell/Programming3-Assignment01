@@ -1,6 +1,6 @@
 ﻿namespace Assignment01
 {
-    partial class NotificationManagerform
+    partial class Mainform
     {
         /// <summary>
         /// Required designer variable.
@@ -66,11 +66,11 @@
             this.Exitbtn.UseVisualStyleBackColor = false;
             this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
             // 
-            // NotificationManagerform
+            // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(548, 86);
             this.Controls.Add(this.Exitbtn);
             this.Controls.Add(this.PublishNotificationbtn);
@@ -79,7 +79,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
-            this.Name = "NotificationManagerform";
+            this.Name = "Mainform";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notification Manager";

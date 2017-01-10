@@ -16,7 +16,7 @@ namespace Assignment01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NotificationManagerform());
+            Application.Run(new Mainform());
         }
     }
 }
