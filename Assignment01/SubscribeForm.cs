@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Assignment01
 {
-    public partial class NotificationManagerform : Form
+    public partial class SubscribeForm : Form
     {
-        public NotificationManagerform()
+        public SubscribeForm()
         {
             InitializeComponent();
         }
