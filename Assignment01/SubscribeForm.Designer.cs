@@ -85,7 +85,7 @@
             // 
             this.BtnSubscribe.Location = new System.Drawing.Point(12, 81);
             this.BtnSubscribe.Name = "BtnSubscribe";
-            this.BtnSubscribe.Size = new System.Drawing.Size(102, 29);
+            this.BtnSubscribe.Size = new System.Drawing.Size(100, 43);
             this.BtnSubscribe.TabIndex = 5;
             this.BtnSubscribe.Text = "Subscribe";
             this.BtnSubscribe.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             // 
             this.btnUnsubscribe.Location = new System.Drawing.Point(174, 80);
             this.btnUnsubscribe.Name = "btnUnsubscribe";
-            this.btnUnsubscribe.Size = new System.Drawing.Size(113, 29);
+            this.btnUnsubscribe.Size = new System.Drawing.Size(117, 43);
             this.btnUnsubscribe.TabIndex = 6;
             this.btnUnsubscribe.Text = "Unsubscribe";
             this.btnUnsubscribe.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@
             // 
             this.Cancel.Location = new System.Drawing.Point(351, 81);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(90, 29);
+            this.Cancel.Size = new System.Drawing.Size(100, 43);
             this.Cancel.TabIndex = 7;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(473, 118);
+            this.ClientSize = new System.Drawing.Size(473, 134);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.btnUnsubscribe);
             this.Controls.Add(this.BtnSubscribe);

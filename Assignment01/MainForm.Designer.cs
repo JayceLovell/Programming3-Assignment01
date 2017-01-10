@@ -38,7 +38,7 @@
             this.ManageSubscriptionsbtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ManageSubscriptionsbtn.Location = new System.Drawing.Point(13, 13);
             this.ManageSubscriptionsbtn.Name = "ManageSubscriptionsbtn";
-            this.ManageSubscriptionsbtn.Size = new System.Drawing.Size(196, 58);
+            this.ManageSubscriptionsbtn.Size = new System.Drawing.Size(197, 43);
             this.ManageSubscriptionsbtn.TabIndex = 0;
             this.ManageSubscriptionsbtn.Text = "Manage Subscriptions";
             this.ManageSubscriptionsbtn.UseVisualStyleBackColor = false;
@@ -49,7 +49,7 @@
             this.PublishNotificationbtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PublishNotificationbtn.Location = new System.Drawing.Point(216, 13);
             this.PublishNotificationbtn.Name = "PublishNotificationbtn";
-            this.PublishNotificationbtn.Size = new System.Drawing.Size(168, 58);
+            this.PublishNotificationbtn.Size = new System.Drawing.Size(169, 43);
             this.PublishNotificationbtn.TabIndex = 1;
             this.PublishNotificationbtn.Text = "Publish Notification";
             this.PublishNotificationbtn.UseVisualStyleBackColor = false;
@@ -60,7 +60,7 @@
             this.Exitbtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.Exitbtn.Location = new System.Drawing.Point(391, 13);
             this.Exitbtn.Name = "Exitbtn";
-            this.Exitbtn.Size = new System.Drawing.Size(133, 58);
+            this.Exitbtn.Size = new System.Drawing.Size(100, 43);
             this.Exitbtn.TabIndex = 2;
             this.Exitbtn.Text = "Exit";
             this.Exitbtn.UseVisualStyleBackColor = false;
@@ -71,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(548, 86);
+            this.ClientSize = new System.Drawing.Size(505, 68);
             this.Controls.Add(this.Exitbtn);
             this.Controls.Add(this.PublishNotificationbtn);
             this.Controls.Add(this.ManageSubscriptionsbtn);

@@ -78,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PublishForm.resx">
+      <DependentUpon>PublishForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubscribeForm.resx">
       <DependentUpon>SubscribeForm.cs</DependentUpon>
     </EmbeddedResource>
