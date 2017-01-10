@@ -1,6 +1,6 @@
 ﻿namespace Assignment01
 {
-    partial class Form1
+    partial class NotificationManagerform
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ManageSubscriptionsbtn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // ManageSubscriptionsbtn
+            // 
+            this.ManageSubscriptionsbtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ManageSubscriptionsbtn.Location = new System.Drawing.Point(13, 13);
+            this.ManageSubscriptionsbtn.Name = "ManageSubscriptionsbtn";
+            this.ManageSubscriptionsbtn.Size = new System.Drawing.Size(196, 58);
+            this.ManageSubscriptionsbtn.TabIndex = 0;
+            this.ManageSubscriptionsbtn.Text = "Manage Subscriptions";
+            this.ManageSubscriptionsbtn.UseVisualStyleBackColor = false;
+            // 
+            // NotificationManagerform
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(548, 86);
+            this.Controls.Add(this.ManageSubscriptionsbtn);
+            this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.MaximizeBox = false;
+            this.Name = "NotificationManagerform";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Notification Manager";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button ManageSubscriptionsbtn;
     }
 }
 
