@@ -1,5 +1,4 @@
-﻿using Assignment01;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Assignment01;
 
 namespace Assignment01
 {
@@ -56,6 +56,39 @@ namespace Assignment01
         private void Cancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Subscribe(object sender, EventArgs e)
+        {
+            Publisher publisher = new Publisher();
+
+            string info;
+            if (MessagePhoneChk.Checked)
+            {
+                foreach(var Subscriber in Subscribers.SubscribersList)
+                {
+                    if(Subscriber.PhoneNumber == txtPhoneNumber.Text)
+                    {
+                        MessageBox.Show("This number is already subscribed", "Already Listed",MessageBoxButtons.RetryCancel);
+                    }
+                }
+                info = txtPhoneNumber.Text;
+                SendByPhoneNumber send2phonenumber = new SendByPhoneNumber(info);
+                send2phonenumber.Subscribe(publisher);
+            }
+            /*if(MessageEmailChk.Checked)
+            {
+                info = txtEmail.text;
+                SendByEmail send2Email = new SendByEmail(info);
+                send2Email.Subscribe();
+            }*/
+            publisher.PublishMessage("New Notifications will be sent to");
+            Subscribers.SubscribersList.Add(new Subscribers(TxtEmail.Text, txtPhoneNumber.Text));
+        }
+
+        private void Unsubscribe(object sender, EventArgs e)
+        {
+
         }
     }
 }
