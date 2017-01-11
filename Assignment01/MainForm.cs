@@ -41,10 +41,5 @@ namespace Assignment01
             frm.Show();
             Hide();
         }
-
-        private void Mainform_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
