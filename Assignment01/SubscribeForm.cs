@@ -24,7 +24,7 @@ namespace Assignment01
         /// </summary>
         private void SubscribeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you Sure?","Closing",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Form is closing are you Sure?","Closing",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
             if(result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -74,12 +74,21 @@ namespace Assignment01
                 {
                     if(Subscriber.PhoneNumber == txtPhoneNumber.Text)
                     {
-                        MessageBox.Show("This number is already subscribed", "Already Listed",MessageBoxButtons.RetryCancel);
+                        DialogResult result = MessageBox.Show("This number is already subscribed", "Already Listed",MessageBoxButtons.RetryCancel);
+                        if (result == DialogResult.Cancel)
+                        {
+                            Close();
+                        }
+                        else
+                        {
+                            return;
+                        }
                     }
                 }
                 info = txtPhoneNumber.Text;
                 SendByPhoneNumber send2phonenumber = new SendByPhoneNumber(info);
                 send2phonenumber.Subscribe(publisher);
+                MessageBox.Show("You have subscribed with your Phone", "Subscribed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if(!ValidatePhoneNumber(txtPhoneNumber.Text) && MessagePhoneChk.Checked)
             {
@@ -107,6 +116,7 @@ namespace Assignment01
                 info = TxtEmail.Text;
                 SendByEmail send2Email = new SendByEmail(info);
                 send2Email.Subscribe(publisher);
+                MessageBox.Show("You have subscribed with your Email", "Subscribed",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else if(!ValidateEmail(TxtEmail.Text) && MessageEmailChk.Checked)
             {
@@ -120,9 +130,8 @@ namespace Assignment01
                     return;
                 }
             }
-
-            publisher.PublishMessage("New Notifications will be sent to");
             Subscribers.SubscribersList.Add(new Subscribers(TxtEmail.Text, txtPhoneNumber.Text));
+            Close();
         }
         /// <summary>
         /// This method unsubscribes users

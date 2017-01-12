@@ -58,6 +58,7 @@
             this.btnPublish.TabIndex = 5;
             this.btnPublish.Text = "Publish";
             this.btnPublish.UseVisualStyleBackColor = true;
+            this.btnPublish.Click += new System.EventHandler(this.btnPublish_Click);
             // 
             // btnExit
             // 
@@ -80,7 +81,7 @@
             this.Controls.Add(this.txtContent);
             this.Controls.Add(this.lbltitle);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "PublishForm";
             this.ShowIcon = false;

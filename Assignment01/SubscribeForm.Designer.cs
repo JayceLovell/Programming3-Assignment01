@@ -40,8 +40,6 @@
             // MessageEmailChk
             // 
             this.MessageEmailChk.AutoSize = true;
-            this.MessageEmailChk.Checked = true;
-            this.MessageEmailChk.CheckState = System.Windows.Forms.CheckState.Checked;
             this.MessageEmailChk.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.MessageEmailChk.FlatAppearance.BorderSize = 15;
             this.MessageEmailChk.Location = new System.Drawing.Point(12, 18);

@@ -25,7 +25,7 @@ namespace Assignment01
         }
         private void sendMessage(string msg)
         {
-            MessageBox.Show("You have subscribed to the Email Address : " + Email, "Subscribe Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("The Message '"+msg+"' have bin sent to the Email Address : " + Email, "Subscribe Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         public void Subscribe(Publisher pub)
         {

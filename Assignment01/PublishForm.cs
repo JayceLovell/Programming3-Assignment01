@@ -29,7 +29,7 @@ namespace Assignment01
         /// </summary>
         private void PublishForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you Sure?", "Closing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Form is closing are you Sure?", "Closing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -40,6 +40,21 @@ namespace Assignment01
         /// </summary>
         private void btnExit_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void btnPublish_Click(object sender, EventArgs e)
+        {
+            Publisher publisher = new Publisher();
+
+            foreach (var Subscriber in Subscribers.SubscribersList)
+            {
+                SendByEmail sendbyemail = new SendByEmail(Subscriber.Email);
+                sendbyemail.Subscribe(publisher);
+                SendByPhoneNumber sendbyphonenumber = new SendByPhoneNumber(Subscriber.PhoneNumber);
+                sendbyphonenumber.Subscribe(publisher);
+                publisher.PublishMessage(txtContent.Text);
+            }
             Close();
         }
     }
