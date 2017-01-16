@@ -41,5 +41,13 @@ namespace Assignment01
             frm.Show();
             Hide();
         }
+        /// <summary>
+        /// This method opens the About Form
+        /// </summary>
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            AboutAssignment01 frm = new AboutAssignment01();
+            frm.Show();
+        }
     }
 }

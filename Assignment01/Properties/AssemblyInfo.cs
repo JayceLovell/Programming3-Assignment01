@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Assignment01")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Assignment 01 - Programming 3")]
+[assembly: AssemblyDescription("In the real world, the notification management system consists of two parts, one is to enable clients to subscribe/unsubscribe the notification, and another part is to facilitate administrator(s) to publish the notification. This assignment simplifies the problem, and merges two parts as one.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Assignment01")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Fluffy.Inc")]
+[assembly: AssemblyProduct("Subscribtion and Publishing App")]
+[assembly: AssemblyCopyright("")]
+[assembly: AssemblyTrademark("Fluffy.Inc")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
