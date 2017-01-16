@@ -145,25 +145,29 @@ namespace Assignment01
                 var user = Subscribers.SubscribersList.Find(item => item.Email.Contains(TxtEmail.Text));
                 if(user!=null)
                 {
+                    System.Media.SystemSounds.Question.Play();
                     DialogResult result = MessageBox.Show("Email Found are you sure you want to Unsubscribe " + user.Email + "?", "Unsubscribing", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
                         Subscribers.SubscribersList.Remove(user);
                         MessageBox.Show("Email Succesfully Unsubscribed","Ubsubscribe",MessageBoxButtons.OK);
+                        System.Media.SystemSounds.Beep.Play();
                     }
                 }
                 
             }
             else if(MessagePhoneChk.Checked)
            {
-                var user = Subscribers.SubscribersList.Find(item => item.Email.Contains(txtPhoneNumber.Text));
+                var user = Subscribers.SubscribersList.Find(item => item.PhoneNumber.Contains(txtPhoneNumber.Text));
                 if (user != null)
                 {
-                    DialogResult result = MessageBox.Show("Email Found are you sure you want to Unsubscribe " + user.PhoneNumber + "?", "Unsubscribing", MessageBoxButtons.YesNo);
+                    System.Media.SystemSounds.Question.Play();
+                    DialogResult result = MessageBox.Show("Phone Found are you sure you want to Unsubscribe " + user.PhoneNumber + "?", "Unsubscribing", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
                         Subscribers.SubscribersList.Remove(user);
-                        MessageBox.Show("Email Succesfully Unsubscribed", "Ubsubscribe", MessageBoxButtons.OK);
+                        MessageBox.Show("Phone Succesfully Unsubscribed", "Ubsubscribe", MessageBoxButtons.OK);
+                        System.Media.SystemSounds.Beep.Play();
                     }
                 }
             }

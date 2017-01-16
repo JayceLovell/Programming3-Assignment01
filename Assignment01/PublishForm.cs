@@ -29,7 +29,7 @@ namespace Assignment01
         /// </summary>
         private void PublishForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Form is closing are you Sure?", "Closing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Form is closing", "Closing", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -46,14 +46,20 @@ namespace Assignment01
         private void btnPublish_Click(object sender, EventArgs e)
         {
             Publisher publisher = new Publisher();
-
-            foreach (var Subscriber in Subscribers.SubscribersList)
+            if (Subscribers.SubscribersList.Count==0)
             {
-                SendByEmail sendbyemail = new SendByEmail(Subscriber.Email);
-                sendbyemail.Subscribe(publisher);
-                SendByPhoneNumber sendbyphonenumber = new SendByPhoneNumber(Subscriber.PhoneNumber);
-                sendbyphonenumber.Subscribe(publisher);
-                publisher.PublishMessage(txtContent.Text);
+                MessageBox.Show("They are currently no Subscribers to Notify", "Empty Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                foreach (var Subscriber in Subscribers.SubscribersList)
+                {
+                    SendByEmail sendbyemail = new SendByEmail(Subscriber.Email);
+                    sendbyemail.Subscribe(publisher);
+                    SendByPhoneNumber sendbyphonenumber = new SendByPhoneNumber(Subscriber.PhoneNumber);
+                    sendbyphonenumber.Subscribe(publisher);
+                    publisher.PublishMessage(txtContent.Text);
+                }
             }
             Close();
         }
