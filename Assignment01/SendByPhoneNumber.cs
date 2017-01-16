@@ -25,7 +25,10 @@ namespace Assignment01
         }
         private void sendMessage(string msg)
         {
-            MessageBox.Show("The Message '"+msg+"' have been sent to the number  #" + PhoneNumber,"Sent",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            if (PhoneNumber != "#-###-###-####")
+            {
+                MessageBox.Show("The Message '" + msg + "' have been sent to the number  #" + PhoneNumber, "Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         public void Subscribe(Publisher pub)
         {
